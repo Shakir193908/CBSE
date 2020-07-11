@@ -16,14 +16,14 @@
         <h:body>
 
             <p:layout fullPage="true">
-                
+
                 <!--Header Layout-->
-                <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
-                    Header
+                <p:layoutUnit position="north" size="50" resizable="true" closable="true" collapsible="true">
+                    Register And Edit Bank
                 </p:layoutUnit>
-                
-                
-                
+
+
+
                 <!--Menu Layout-->
                 <p:layoutUnit position="west" size="175" header="Left" collapsible="true">
                     <p:menu>
@@ -37,7 +37,7 @@
 
                     </p:menu>
                 </p:layoutUnit>
- 
+
                 <!--Center Layout-->
                 <p:layoutUnit position="center">
                     <h1>Bank Account List</h1>
@@ -45,23 +45,37 @@
                         <p:outputLabel for="banknameInput" value="Bank Name : "/>
                         <p:inputText id="banknameInput" value="#{bankController.bankname}"/>
                         <p:commandButton value="Save Bank" update="messageOutput"/>
+                        <br></br>
                         <h:outputText id="messageOutput" value="#{bankController.insertBankname()}"/>
                         <br></br>
+
                     </h:form>
-                    
+
                     <h1>View Current Bank List</h1>
-                    <p:commandButton value="Refresh List" action="#{bankController.banklist}"/>
+                    <p:commandButton value="Refresh List" update="listTable"/>
                     <br></br>
-                    <p:dataTable var="data" value="#{bankController.banklist}">
-                        <p:column headerText="Currency Available">
-                            #{data}
+                    <br></br>
+                    <p:dataTable id="listTable" var="data" value="#{bankController.banklist}">
+                        <p:column headerText="ID">
+                            #{data.id}
+                        </p:column>
+                        <p:column headerText="Bank Name">
+                            #{data.bankname}
                         </p:column>
                     </p:dataTable>
-                </p:layoutUnit>
                 
-                <!--Footer Layout-->
-                <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
-                    Footer
+                <h:form>
+                    <h1>Edit or Delete Bank</h1>
+                    <p:outputLabel for="bankid" value="Enter ID: "/>
+                    <p:inputText id="bankid" value="#{bankController.idholder}"/>
+                    <p:outputLabel for="bankname" value="Enter Bankname: "/>
+                    <p:inputText id="bankname" value="#{bankController.nameholder}"/>
+                    
+                    <p:commandButton value="Edit" update="editsuccess"/>
+                    <h:outputText id="editsuccess" value="#{bankController.editBank()}"/>
+                    <p:commandButton value="Delete" update="deletesuccess"/>
+                    <h:outputText id="deletesuccess" value="#{bankController.deleteBank()}"/>
+                </h:form>
                 </p:layoutUnit>
             </p:layout>
 
