@@ -9,22 +9,22 @@
         <h:head>
             <f:facet name="first">
                 <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
-                <title>PrimeFaces</title>
+                <title>Register Bank</title>
             </f:facet>
         </h:head>
 
         <h:body>
 
             <p:layout fullPage="true">
-
+                
+                <!--Header Layout-->
                 <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
                     Header
                 </p:layoutUnit>
-
-                <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
-                    Footer
-                </p:layoutUnit>
-
+                
+                
+                
+                <!--Menu Layout-->
                 <p:layoutUnit position="west" size="175" header="Left" collapsible="true">
                     <p:menu>
                         <p:submenu label="Resources">
@@ -37,11 +37,32 @@
 
                     </p:menu>
                 </p:layoutUnit>
-
+ 
+                <!--Center Layout-->
                 <p:layoutUnit position="center">
-                    Welcome to PrimeFaces
+                    <h1>Bank Account List</h1>
+                    <h:form>
+                        <p:outputLabel for="banknameInput" value="Bank Name : "/>
+                        <p:inputText id="banknameInput" value="#{bankController.bankname}"/>
+                        <p:commandButton value="Save Bank" update="messageOutput"/>
+                        <h:outputText id="messageOutput" value="#{bankController.insertBankname()}"/>
+                        <br></br>
+                    </h:form>
+                    
+                    <h1>View Current Bank List</h1>
+                    <p:commandButton value="Refresh List" action="#{bankController.banklist}"/>
+                    <br></br>
+                    <p:dataTable var="data" value="#{bankController.banklist}">
+                        <p:column headerText="Currency Available">
+                            #{data}
+                        </p:column>
+                    </p:dataTable>
                 </p:layoutUnit>
-
+                
+                <!--Footer Layout-->
+                <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
+                    Footer
+                </p:layoutUnit>
             </p:layout>
 
         </h:body>
