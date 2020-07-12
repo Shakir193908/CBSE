@@ -32,7 +32,7 @@ public class BankController {
 
     public BankController() {
     }
-    
+
     //inserting bank name into database
     public String insertBankname() {
         Statement st;
@@ -47,14 +47,13 @@ public class BankController {
             stmt.executeUpdate();
             con.close();
             return "Insert Succesfully";
-            
 
         } catch (SQLException ex) {
             Logger.getLogger(BankController.class.getName()).log(Level.SEVERE, null, ex);
             return "Insertion Fail";
         }
     }
-    
+
     //getting bank list from the database
     public ArrayList getBanklist() {
         Statement st;
@@ -67,55 +66,54 @@ public class BankController {
             ResultSet result;
             result = st.executeQuery(sql);
             while (result.next()) {
-                BankObject holder = new BankObject(result.getInt("id"),result.getString("bankname"));
+                BankObject holder = new BankObject(result.getInt("id"), result.getString("bankname"));
                 banklist.add(holder);
             }
-
             con.close();
             return banklist;
 
         } catch (SQLException ex) {
             Logger.getLogger(BankController.class.getName()).log(Level.SEVERE, null, ex);
         }
-
         return banklist;
     }
-    
-    public String deleteBank(){
+
+    //Deleting bank from the database
+    public String deleteBank() {
         Statement st;
         try {
             st = SQLConnection.getInstance().getSQLConnection();
             Connection con = st.getConnection();
             PreparedStatement stmt;
-            stmt = con.prepareStatement("DELETE FROM BANK WHERE ID = "+idholder);
+            stmt = con.prepareStatement("DELETE FROM BANK WHERE ID = " + idholder);
             stmt.executeUpdate();
             con.close();
             return "Delete Success!";
-            
+
         } catch (SQLException ex) {
             Logger.getLogger(BankController.class.getName()).log(Level.SEVERE, null, ex);
             return "Delete Failed!";
         }
     }
-    
-    public String editBank(){
+
+    //Editing bank from the database
+    public String editBank() {
         Statement st;
         try {
             st = SQLConnection.getInstance().getSQLConnection();
             Connection con = st.getConnection();
             PreparedStatement stmt;
-            stmt = con.prepareStatement("UPDATE BANK SET BANKNAME = '"+nameholder+"' WHERE ID = " + idholder);
+            stmt = con.prepareStatement("UPDATE BANK SET BANKNAME = '" + nameholder + "' WHERE ID = " + idholder);
             stmt.executeUpdate();
             con.close();
             return "Edit Success!";
-            
+
         } catch (SQLException ex) {
             Logger.getLogger(BankController.class.getName()).log(Level.SEVERE, null, ex);
             return "Edit Failed!";
         }
     }
-    
-    
+
     //setter and getter
     public String getBankname() {
         return bankname;
@@ -140,6 +138,4 @@ public class BankController {
     public void setIdholder(int idholder) {
         this.idholder = idholder;
     }
-    
-    
 }
