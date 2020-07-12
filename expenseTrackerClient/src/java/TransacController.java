@@ -5,20 +5,20 @@
  */
 
 import connection.SQLConnection;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.context.FacesContext;
 
 /**
  *
@@ -31,12 +31,15 @@ public class TransacController {
     private double amount;
     private String detail;
     private Date tarikh;
-    private int userid = 1;
     private int bankid;
     private int transid;
     private Map<String, Integer> bankmap;
     private ArrayList<TransObject> TransList = new ArrayList<>();
-
+    
+    FacesContext context = FacesContext.getCurrentInstance();
+    int userid = Integer.parseInt(context.getExternalContext().getSessionMap().get("userid").toString());
+    
+    //Getting Transaction List from Database
     public ArrayList getTranslist() {
         Statement st;
         try {
@@ -60,7 +63,8 @@ public class TransacController {
         }
 
     }
-
+    
+    //Adding transaction to the Database
     public String addTransaction() {
         Statement st;
         try {
@@ -88,6 +92,7 @@ public class TransacController {
         }
     }
 
+    //Delete transaction from the Database
     public String deleteTrans() {
         Statement st;
         try {
@@ -109,6 +114,14 @@ public class TransacController {
         }
     }
 
+    //goto bank navigation action for navigation menu
+    public void gotoBank() throws IOException{
+        FacesContext context = FacesContext.getCurrentInstance();
+        context.getExternalContext().getSessionMap().put("userid", userid);
+        context.getExternalContext().redirect("bankView.xhtml");
+    }
+    
+    //Setter and Getter
     public TransacController() {
     }
 
