@@ -7,6 +7,7 @@
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import connection.SQLConnection;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,6 +16,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.faces.context.FacesContext;
 
 /**
  *
@@ -29,7 +31,12 @@ public class BankController {
     private ArrayList<BankObject> banklist = new ArrayList<>();
     private String nameholder;
     private int idholder;
-
+    
+    /* To Receive Data Userid from previous page
+    FacesContext context = FacesContext.getCurrentInstance();
+    int userid = Integer.parseInt(context.getExternalContext().getSessionMap().get("userid").toString());
+    */
+    
     public BankController() {
     }
 
@@ -112,6 +119,13 @@ public class BankController {
             Logger.getLogger(BankController.class.getName()).log(Level.SEVERE, null, ex);
             return "Edit Failed!";
         }
+    }
+    
+    //goto Transaction navigation action for navigation menu
+    public void gotoTransaction() throws IOException{
+        FacesContext context = FacesContext.getCurrentInstance();
+        context.getExternalContext().getSessionMap().put("userid", userid);
+        context.getExternalContext().redirect("transactionView.xhtml");
     }
 
     //setter and getter

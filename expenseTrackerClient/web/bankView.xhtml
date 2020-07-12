@@ -16,20 +16,17 @@
         <h:body>
 
             <p:layout fullPage="true">
-
                 <!--Header Layout-->
                 <p:layoutUnit position="north" size="50" resizable="true" closable="true" collapsible="true">
                     Register And Edit Bank
                 </p:layoutUnit>
 
-
-
                 <!--Menu Layout-->
                 <p:layoutUnit position="west" size="175" header="Left" collapsible="true">
                     <p:menu>
                         <p:submenu label="Resources">
-                            <p:menuitem value="Bank" outcome="bankView" />
-                            <p:menuitem value="Transaction" outcome="transactionView" />
+                            <p:menuitem value="Bank" outcome="bankView"/>
+                            <p:menuitem value="Transaction" outcome="#{bankController.gotoTransaction()}" />
                             <p:menuitem value="Forum" url="http://forum.primefaces.org/" />
                             <p:menuitem value="Themes" url="http://www.primefaces.org/themes.html" />
 
@@ -48,7 +45,6 @@
                         <br></br>
                         <h:outputText id="messageOutput" value="#{bankController.insertBankname()}"/>
                         <br></br>
-
                     </h:form>
 
                     <h1>View Current Bank List</h1>
