@@ -1,6 +1,7 @@
-# CBSE
-Component Base Group Project Repository 
-Web Expense Tracker - Website used to track all of your expense and saving for multiple saving acccount
+# PUT PROJECT NAME
+Component Base Group Project Repository
+
+This is a Web Expense Tracker - Website used to track all of your expense and saving for multiple saving acccount
 
 Targeted Requirement
 1. Able to create,save,edit and delete saving account
