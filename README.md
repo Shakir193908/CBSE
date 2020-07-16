@@ -1,4 +1,4 @@
-# PUT PROJECT NAME
+# EXPENSES TRACKER
 Component Base Group Project Repository
 
 This is a Web Expense Tracker - Website used to track all of your expense and saving for multiple saving acccount
