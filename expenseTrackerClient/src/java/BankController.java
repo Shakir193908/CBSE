@@ -27,16 +27,13 @@ import javax.faces.context.FacesContext;
 public class BankController {
 
     private String bankname;
-    int userid = 1;
     private ArrayList<BankObject> banklist = new ArrayList<>();
     private String nameholder;
     private int idholder;
     
-    /* To Receive Data Userid from previous page
     FacesContext context = FacesContext.getCurrentInstance();
     int userid = Integer.parseInt(context.getExternalContext().getSessionMap().get("userid").toString());
-    */
-    
+
     public BankController() {
     }
 
@@ -72,7 +69,7 @@ public class BankController {
             String sql = "Select id,bankname from bank where user_id = " + userid;
             ResultSet result;
             result = st.executeQuery(sql);
-            while (result.next()) {
+            if (result.next()) {
                 BankObject holder = new BankObject(result.getInt("id"), result.getString("bankname"));
                 banklist.add(holder);
             }

@@ -10,5 +10,22 @@
             <file>file:/C:/Users/Shakir/Documents/NetBeansProjects/CBSE_GP/CBSE/expenseTrackerClient/web/index.xhtml</file>
             <file>file:/C:/Users/Shakir/Documents/NetBeansProjects/CBSE_GP/CBSE/expenseTrackerClient/src/java/BankObject.java</file>
         </group>
+        <group name="Lab4">
+            <file>file:/C:/Users/spino/Documents/GitHub/CBSE/expenseTrackerClient/src/java/BankObject.java</file>
+            <file>file:/C:/Users/spino/Documents/GitHub/CBSE/expenseTrackerClient/web/transactionView.xhtml</file>
+            <file>file:/C:/Users/spino/Documents/GitHub/CBSE/expenseTrackerClient/src/java/BankController.java</file>
+            <file>file:/C:/Users/spino/Documents/GitHub/CBSE/expenseTrackerClient/src/java/connection/SQLConnection.java</file>
+            <file>file:/C:/Users/spino/Documents/GitHub/CBSE/expenseTrackerClient/web/bankView.xhtml</file>
+            <file>file:/C:/Users/spino/Documents/GitHub/CBSE/expenseTrackerClient/src/java/TransObject.java</file>
+            <file>file:/C:/Users/spino/Documents/GitHub/CBSE/expenseTrackerClient/web/index.xhtml</file>
+            <file>file:/C:/Users/spino/Documents/GitHub/CBSE/expenseTrackerClient/src/java/TransacController.java</file>
+        </group>
+        <group name="CBSE Group Project">
+            <file>file:/C:/Users/spino/Documents/GitHub/CBSE/expenseTrackerClient/web/transactionView.xhtml</file>
+            <file>file:/C:/Users/spino/Documents/GitHub/CBSE/expenseTrackerClient/src/java/BankController.java</file>
+            <file>file:/C:/Users/spino/Documents/GitHub/CBSE/expenseTrackerClient/web/loginView.xhtml</file>
+            <file>file:/C:/Users/spino/Documents/GitHub/CBSE/expenseTrackerClient/web/bankView.xhtml</file>
+            <file>file:/C:/Users/spino/Documents/GitHub/CBSE/expenseTrackerClient/src/java/TransacController.java</file>
+        </group>
     </open-files>
 </project-private>

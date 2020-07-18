@@ -121,6 +121,11 @@ public class TransacController {
         context.getExternalContext().redirect("bankView.xhtml");
     }
     
+    public String logout() {
+        FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
+        return "loginView.xhtml";
+    }
+    
     //Setter and Getter
     public TransacController() {
     }

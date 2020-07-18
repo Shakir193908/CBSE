@@ -12,12 +12,11 @@ and open the template in the editor.
       xmlns:ui="http://java.sun.com/jsf/facelets">
 
     <h:head>
-        <title>TODO supply a title</title>
+        <title>Transaction</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </h:head>
     <h:body>
-        <p:layout fullPage="true">
-            
+        <p:layout fullPage="true"> 
             <!--Header Layout-->
             <p:layoutUnit position="north" size="50" resizable="true" closable="true" collapsible="true">
                 Register And Delete Transaction
@@ -25,16 +24,17 @@ and open the template in the editor.
 
             <!--Menu Layout-->
             <p:layoutUnit position="west" size="175" header="Left" collapsible="true">
-                <p:menu>
-                    <p:submenu label="Navigation">
-                        <p:menuitem value="Bank" outcome="bankView"/>
-                        <p:menuitem value="Transaction" outcome="transactionView" />
-                        <p:menuitem value="Forum" url="http://forum.primefaces.org/" />
-                        <p:menuitem value="Themes" url="http://www.primefaces.org/themes.html" />
+                <h:form>
+                    <p:menu>
+                        <p:submenu label="Navigation">
+                            <p:menuitem value="Bank" outcome="bankView"/>
+                            <p:menuitem value="Transaction" outcome="transactionView" />
+                            <p:menuitem value="Forum" url="http://forum.primefaces.org/" />
+                            <p:menuitem value="Logout" action="#{transacController.logout}" />
+                        </p:submenu>
 
-                    </p:submenu>
-
-                </p:menu>
+                    </p:menu>
+                </h:form>
             </p:layoutUnit>
             <p:layoutUnit position="center">
                 <div>
