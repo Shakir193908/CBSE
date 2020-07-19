@@ -32,10 +32,11 @@ and open the template in the editor.
                             <p:menuitem value="Forum" url="http://forum.primefaces.org/" />
                             <p:menuitem value="Logout" action="#{transacController.logout}" />
                         </p:submenu>
-
                     </p:menu>
                 </h:form>
             </p:layoutUnit>
+            
+            <!--Center Layout-->
             <p:layoutUnit position="center">
                 <div>
                     <h1>Bank List</h1>
@@ -53,7 +54,7 @@ and open the template in the editor.
                     <h1>Please Select Bank to View Transaction List</h1>
                     <p:outputLabel for="idbankinput" value="ID:"/>
                     <p:inputText id="idbankinput" value="#{transacController.bankid}" style="padding: 8px"/>
-                    <p:commandButton value="Select Bank ID" />
+                    <p:commandButton value="Select Bank ID"/>
                 </h:form>
                 <br></br>
                 <br></br>
@@ -71,6 +72,9 @@ and open the template in the editor.
                     <p:column headerText="Date">
                         #{bean.tarikh}
                     </p:column>
+                    <p:column headerText="Type">
+                        #{bean.transaktype}
+                    </p:column>
                 </p:dataTable>
 
                 <h1>Add Transaction</h1>
@@ -82,6 +86,11 @@ and open the template in the editor.
                         <f:selectItem itemLabel="Food" itemValue="Food"/>
                         <f:selectItem itemLabel="Entertainment" itemValue="Entertainment"/>
                         <f:selectItem itemLabel="Commitment" itemValue="Commitemnt"/>
+                    </p:selectOneMenu>
+                    <p:outputLabel for="transaksiType" value="Type: "/>
+                    <p:selectOneMenu id="transaksiType" value="#{transacController.transakType}">
+                        <f:selectItem itemLabel="Income" itemValue="Income"/>
+                        <f:selectItem itemLabel="Expenses" itemValue="Expenses"/>
                     </p:selectOneMenu>
                     <p:outputLabel for="tarikh" value="Date: "/>
                     <p:calendar id="tarikh" value="#{transacController.tarikh}"/>

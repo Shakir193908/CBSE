@@ -23,16 +23,16 @@
 
                 <!--Menu Layout-->
                 <p:layoutUnit position="west" size="175" header="Left" collapsible="true">
+                    <h:form>
                     <p:menu>
-                        <p:submenu label="Resources">
+                        <p:submenu label="Navigation">
                             <p:menuitem value="Bank" outcome="bankView"/>
                             <p:menuitem value="Transaction" outcome="transactionView" />
                             <p:menuitem value="Forum" url="http://forum.primefaces.org/" />
-                            <p:menuitem value="Themes" url="http://www.primefaces.org/themes.html" />
-
+                            <p:menuitem value="Logout" action="#{transacController.logout}" />
                         </p:submenu>
-
                     </p:menu>
+                </h:form>
                 </p:layoutUnit>
 
                 <!--Center Layout-->

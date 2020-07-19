@@ -11,12 +11,14 @@ public class TransObject {
     private double amount;
     private Date tarikh;
     private String detail;
+    private String transaktype;
     
-    public TransObject(int id, double amount, Date tarikh, String detail){
+    public TransObject(int id, double amount, Date tarikh, String detail, String transaktype){
         this.id = id;
         this.amount = amount;
         this.tarikh = tarikh;
         this.detail = detail;
+        this.transaktype = transaktype;
     }
 
     public int getId() {
@@ -50,6 +52,12 @@ public class TransObject {
     public void setDetail(String detail) {
         this.detail = detail;
     }
-    
-    
+
+    public String getTransaktype() {
+        return transaktype;
+    }
+
+    public void setTransaktype(String transaktype) {
+        this.transaktype = transaktype;
+    }
 }

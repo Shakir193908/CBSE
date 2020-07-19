@@ -33,7 +33,8 @@ public class BankController {
     
     FacesContext context = FacesContext.getCurrentInstance();
     int userid = Integer.parseInt(context.getExternalContext().getSessionMap().get("userid").toString());
-
+    
+    
     public BankController() {
     }
 

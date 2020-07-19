@@ -35,6 +35,7 @@ public class TransacController {
     private int transid;
     private Map<String, Integer> bankmap;
     private ArrayList<TransObject> TransList = new ArrayList<>();
+    private String transakType;
     
     FacesContext context = FacesContext.getCurrentInstance();
     int userid = Integer.parseInt(context.getExternalContext().getSessionMap().get("userid").toString());
@@ -47,11 +48,11 @@ public class TransacController {
             Connection con = st.getConnection();
 
             st = con.createStatement();
-            String sql = "Select id,amount,tarikh,detail from transaksi where user_id = " + userid + "and bank_id = " + bankid;
+            String sql = "Select id,amount,tarikh,detail,transaktype from transaksi where user_id = " + userid + "and bank_id = " + bankid;
             ResultSet result;
             result = st.executeQuery(sql);
             while (result.next()) {
-                TransObject holder = new TransObject(result.getInt("id"), result.getDouble("amount"), result.getDate("tarikh"), result.getString("detail"));
+                TransObject holder = new TransObject(result.getInt("id"), result.getDouble("amount"), result.getDate("tarikh"), result.getString("detail"), result.getString("transaktype"));
                 TransList.add(holder);
             }
             con.close();
@@ -74,12 +75,13 @@ public class TransacController {
             if (tarikh != null) {
                 java.sql.Date sTarikh = new java.sql.Date(tarikh.getTime());
                 PreparedStatement stmt;
-                stmt = con.prepareStatement("insert into transaksi (detail,tarikh,amount,user_id,bank_id) values(?,?,?,?,?)");
+                stmt = con.prepareStatement("insert into transaksi (detail,tarikh,amount,user_id,bank_id,transaktype) values(?,?,?,?,?,?)");
                 stmt.setString(1, detail);
                 stmt.setDate(2, sTarikh);
                 stmt.setDouble(3, amount);
                 stmt.setInt(4, userid);
                 stmt.setInt(5, bankid);
+                stmt.setString(6, transakType);
                 stmt.executeUpdate();
                 con.close();
                 return "Insert Succesfully";
@@ -189,5 +191,15 @@ public class TransacController {
     public void setTransid(int transid) {
         this.transid = transid;
     }
+
+    public String getTransakType() {
+        return transakType;
+    }
+
+    public void setTransakType(String transakType) {
+        this.transakType = transakType;
+    }
+    
+    
 
 }
