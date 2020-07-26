@@ -20,12 +20,12 @@ Register page
 ![](UI/Screenshot/register.jpg)
 
 Add Transaction Page
-![](UI/Screenshot/add transaction.png)
+![](UI/Screenshot/add%20transaction.png)
 
 Add Bank Page
-![](UI/Screenshot/add bank.png)
+![](UI/Screenshot/add%20bank.png)
 
 Overview Account Page
-![](UI/Screenshot/overview account)
+![](UI/Screenshot/overview%20account)
 
 ![](UI/Screenshot/chart.png)
