@@ -11,6 +11,11 @@ What the website can do?
 3. Able to view all expenses and saving in one dahsboard (graph/chart)
 4. Able to create personal account and login to it.
 
+# PROJECT DEMO
+
+Link of project demo:
+https://youtu.be/NDYrRtj5duk
+
 # OVERVIEW/SCREENSHOT
 
 Login page\
