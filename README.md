@@ -26,6 +26,6 @@ Add Transaction Page\
 <img src="UI/Screenshot/add%20transaction.png" width="600" >
 
 Overview Account Page\
-<img src="UI/Screenshot/overview%20account" width="600" >
+<img src="UI/Screenshot/overview%20account.png" width="600" >
 <img src="UI/Screenshot/chart.png" width="600" >
 
