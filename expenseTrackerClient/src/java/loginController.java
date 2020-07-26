@@ -12,15 +12,16 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import javax.inject.Named;
+import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
+import javax.inject.Named;
 
 /**
  *
  * @author spino
  */
-@Named(value = "loginController")
+@ManagedBean
 @RequestScoped
 public class loginController {
     private String username, password;
