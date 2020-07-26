@@ -13,19 +13,19 @@ What the website can do?
 
 # OVERVIEW/SCREENSHOT
 
-Login page
+Login page\
 <img src="UI/Screenshot/login.jpg" width="600" >
 
-Register page
+Register page\
 <img src="UI/Screenshot/register.jpg" width="600" >
 
-Add Bank Page
+Add Bank Page\
 <img src="UI/Screenshot/add%20bank.png" width="600" >
 
-Add Transaction Page
+Add Transaction Page\
 <img src="UI/Screenshot/add%20transaction.png" width="600" >
 
-Overview Account Page
+Overview Account Page\
 <img src="UI/Screenshot/overview%20account" width="600" >
 <img src="UI/Screenshot/chart.png" width="600" >
 
