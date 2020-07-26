@@ -14,24 +14,25 @@ What the website can do?
 # OVERVIEW/SCREENSHOT
 
 <img src="UI/Screenshot/login.jpg" width="600" >
+<img src="UI/Screenshot/chart.png" width="600" >
+<img src="UI/Screenshot/register.jpg" width="600" >
+<img src="UI/Screenshot/add%20transaction.png" width="600" >
+<img src="UI/Screenshot/add%20bank.png" width="600" >
+<img src="UI/Screenshot/overview%20account" width="600" >
+
+
 Login page
 ![](UI/Screenshot/login.jpg)
 
-<img src="UI/Screenshot/register.jpg" width="600" >
 Register page
 ![](UI/Screenshot/register.jpg)
 
-<img src="UI/Screenshot/add%20transaction.png" width="600" >
 Add Transaction Page
 ![](UI/Screenshot/add%20transaction.png)
 
-<img src="UI/Screenshot/add%20bank.png" width="600" >
 Add Bank Page
 ![](UI/Screenshot/add%20bank.png)
 
-<img src="UI/Screenshot/overview%20account" width="600" >
 Overview Account Page
 ![](UI/Screenshot/overview%20account)
-
-<img src="UI/Screenshot/chart.png" width="600" >
 ![](UI/Screenshot/chart.png)
