@@ -56,8 +56,9 @@ and open the template in the editor.
                     <h1>Please Select Bank to View Transaction List</h1>
                     <p:outputLabel for="idbankinput" value="ID:"/>
                     <p:inputText id="idbankinput" value="#{transacController.bankid}" style="padding: 8px"/>
-                    <p:commandButton value="Select Bank ID"/>
-                </h:form>
+                    <p:commandButton value="Select Bank ID" update="selected"/>
+                    <h:outputText id="selected" value="#{transacController.bankid}"/>
+                
                 <br></br>
                 <br></br>
                 <p:commandButton value="Refresh List" update="TransacList"/>
@@ -78,7 +79,7 @@ and open the template in the editor.
                         #{bean.transaktype}
                     </p:column>
                 </p:dataTable>
-
+                
                 <h1>Add Transaction</h1>
                 <h:form>
                     <p:outputLabel for="amountText" value="Amount: "/>
@@ -100,7 +101,7 @@ and open the template in the editor.
                     <p:commandButton value="Add Transaction" update="addStatus"/>
                     <h:outputText id="addStatus" value="#{transacController.addTransaction()}"/>
                 </h:form>
-
+                 </h:form>
                 <h1>Delete Transaction</h1>
                 <h:form>
                     <p:outputLabel for="transid" value="Enter ID: "/>
@@ -109,6 +110,7 @@ and open the template in the editor.
                     <p:commandButton value="Delete" update="Transdeletesuccess"/>
                     <h:outputText id="Transdeletesuccess" value="#{transacController.deleteTrans()}"/>
                 </h:form>
+               
             </p:layoutUnit>
         </p:layout>
     </h:body>

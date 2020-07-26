@@ -24,7 +24,7 @@ import javax.faces.context.FacesContext;
  *
  * @author Shakir
  */
-@ManagedBean (name="transac")
+@ManagedBean
 @RequestScoped
 public class TransacController {
 

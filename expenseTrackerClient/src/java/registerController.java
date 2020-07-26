@@ -20,7 +20,7 @@ import javax.faces.context.FacesContext;
  *
  * @author spino
  */
-@Named(value = "registerController")
+
 @ManagedBean
 @RequestScoped
 public class registerController {
