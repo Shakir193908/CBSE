@@ -3,7 +3,7 @@ Component Base Group Project Repository
 
 This is a Web Expense Tracker
 Website that used to track all of your expense and saving for multiple saving acccount
-It uses *WEB SERVICES*
+It uses Google Web Services.
 
 What the website can do?
 1. Able to create,save,edit and delete saving account
