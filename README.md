@@ -10,3 +10,22 @@ What the website can do?
 2. Able to save,edit and delete expenses and saving details
 3. Able to view all expenses and saving in one dahsboard (graph/chart)
 4. Able to create personal account and login to it.
+
+# OVERVIEW/SCREENSHOT
+
+Login page
+![](UI/Screenshot/login.jpg)
+
+Register page
+![](UI/Screenshot/register.jpg)
+
+Add Transaction Page
+![](UI/Screenshot/add transaction.png)
+
+Add Bank Page
+![](UI/Screenshot/add bank.png)
+
+Overview Account Page
+![](UI/Screenshot/overview account)
+
+![](UI/Screenshot/chart.png)
